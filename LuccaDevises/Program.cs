@@ -26,8 +26,14 @@ namespace LuccaDevises
             }
 
             CurrencyConverter converter = new CurrencyConverter();
-
-            Console.WriteLine(converter.Convert(configManager.CurrencyFrom, configManager.CurrencyTo, configManager.Value));
+            int result = converter.Convert(configManager.CurrencyFrom, configManager.CurrencyTo, configManager.Value);
+            if (result < 0)
+            {
+                Console.WriteLine("Impossible to find a path to convert this value");
+                Environment.ExitCode = 1;
+                return;
+            }
+            Console.WriteLine(result);
         }
     }
 }

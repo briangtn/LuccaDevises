@@ -11,11 +11,11 @@ namespace LuccaDevises
 
         public List<string> ExploredNodes = new List<string>();
 
-        public float Convert(string from, string to, float value)
+        public int Convert(string from, string to, float value)
         {
             if (from == to)
             {
-                return value;
+                return (int) value;
             }
             ExploredNodes = new List<string>();
 
@@ -27,7 +27,7 @@ namespace LuccaDevises
                 return -1;
             }
 
-            return ConvertFromPath(shortestPath.GetPath(), value);
+            return (int) ConvertFromPath(shortestPath.GetPath(), value);
         }
 
         private ExplorationPath FindShortestValidPath(List<ExplorationPath> explorations)
