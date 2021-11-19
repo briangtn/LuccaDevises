@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{A403B594-C030-489E-B593-EC427AE6745F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LuccaDevises/Program.cs">
+    <Files>
+      <File FileName="LuccaDevises/Program.cs" Line="16" Column="71" />
+      <File FileName="LuccaDevises/config.txt" Line="8" Column="15" />
+      <File FileName="LuccaDevises/CurrencyConverter.cs" Line="8" Column="16" />
+      <File FileName="LuccaDevises/ExplorationData.cs" Line="12" Column="31" />
+      <File FileName="LuccaDevises/ConfigManager.cs" Line="70" Column="106" />
+      <File FileName="LuccaDevises/CurrencyNode.cs" Line="1" Column="1" />
+      <File FileName="LuccaDevises/Exceptions/InvalidConfigException.cs" Line="19" Column="6" />
+      <File FileName="LuccaDevises/Exceptions/LuccaDevisesException.cs" Line="4" Column="39" />
+      <File FileName="LuccaDevises/Exceptions/ConfigNotFoundException.cs" Line="13" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LuccaDevises" expanded="True">
+            <Node name="LuccaDevises" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LuccaDevises PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
