@@ -11,7 +11,7 @@ namespace LuccaDevises
 
         public List<string> ExploredNodes = new List<string>();
 
-        public int Convert(string from, string to, float value)
+        public int Convert(string from, string to, double value)
         {
             if (from == to)
             {
@@ -27,7 +27,7 @@ namespace LuccaDevises
                 return -1;
             }
 
-            return (int) ConvertFromPath(shortestPath.GetPath(), value);
+            return (int)Math.Round(ConvertFromPath(shortestPath.GetPath(), value));
         }
 
         private ExplorationPath FindShortestValidPath(List<ExplorationPath> explorations)
@@ -46,11 +46,11 @@ namespace LuccaDevises
             return shortestPath;
         }
 
-        private float ConvertFromPath(Dictionary<string, float> path, float value)
+        private double ConvertFromPath(Dictionary<string, double> path, double value)
         {
-            foreach(KeyValuePair<string, float> pathElement in path)
+            foreach(KeyValuePair<string, double> pathElement in path)
             {
-                value *= pathElement.Value;
+                value = Math.Round(value * pathElement.Value, 4);
             }
             return value;
         }
@@ -65,7 +65,7 @@ namespace LuccaDevises
 
             ExploredNodes.Add(currentNode.Name);
 
-            foreach (KeyValuePair<CurrencyNode, float> keyValue in currentNode.LinkedCurrencies)
+            foreach (KeyValuePair<CurrencyNode, double> keyValue in currentNode.LinkedCurrencies)
             {
                 ExplorationPath newExploration = exploration.Clone();
 
@@ -92,7 +92,7 @@ namespace LuccaDevises
             Console.WriteLine("");
             Console.WriteLine("=============================");
             Console.WriteLine("Exploring... " + exploration.IsValidPath);
-            foreach (KeyValuePair<string, float> path in exploration.GetPath())
+            foreach (KeyValuePair<string, double> path in exploration.GetPath())
             {
                 Console.WriteLine("-> " + path.Key + " : " + path.Value);
             }

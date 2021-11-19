@@ -26,7 +26,7 @@ namespace LuccaDevises
         public string[] ConfigLines { get; set; }
         public string CurrencyFrom { get; set; }
         public string CurrencyTo { get; set; }
-        public float Value { get; set; }
+        public double Value { get; set; }
         private Dictionary<string, CurrencyNode> Currencies;
 
         private ConfigManager()
@@ -61,7 +61,7 @@ namespace LuccaDevises
             {
                 string[] firstLineParts = ConfigLines[0].Split(';');
                 CurrencyFrom = firstLineParts[0];
-                Value = float.Parse(firstLineParts[1]);
+                Value = double.Parse(firstLineParts[1]);
                 CurrencyTo = firstLineParts[2];
                 int linesCount = Int32.Parse(ConfigLines[1]);
 
@@ -82,7 +82,7 @@ namespace LuccaDevises
 
                     string currencyFrom = parts[0];
                     string currencyTo = parts[1];
-                    float changeValue = float.Parse(parts[2]);
+                    double changeValue = double.Parse(parts[2]);
 
                     CurrencyNode currencyNodeFrom = null;
                     if (!Currencies.ContainsKey(currencyFrom))
